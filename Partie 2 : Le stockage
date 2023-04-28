@@ -1,0 +1,7 @@
+Question 2.1 : Analyse des disques
+Les systemes de fichiers actuellement montés sont : 
+-sda un disque dur sata 
+-sr0 le disque contenat l'iso
+
+Le disque dur sda utilisent come type de stockage du raid1 et lvm et sr0 contenaant l'iso Rom
+
