@@ -1,0 +1,93 @@
+1) j'obtiens la liste des utilisateurs avec la commande suivante
+
+root@cp3:~# cat /etc passwd
+cat: /etc: est un dossier
+cat: passwd: Aucun fichier ou dossier de ce type
+root@cp3:~# cat /etc/paswwd
+cat: /etc/paswwd: Aucun fichier ou dossier de ce type
+root@cp3:~# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:109::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:104:110:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+avahi-autoipd:x:105:113:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+wilder:x:1000:1000:wilder,,,:/home/wilder:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+bareos:x:107:114:bareos,,,:/var/lib/bareos:/usr/sbin/nologin
+Debian-exim:x:108:115::/var/spool/exim4:/usr/sbin/nologin
+postgres:x:109:117:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+
+2) Je créé un compte avec la commande suivante :
+root@cp3:~# adduser nessim
+Ajout de l'utilisateur « nessim » ...
+Ajout du nouveau groupe « nessim » (1001) ...
+Ajout du nouvel utilisateur « nessim » (1001) avec le groupe « nessim » ...
+Création du répertoire personnel « /home/nessim »...
+Copie des fichiers depuis « /etc/skel »...
+Nouveau mot de passe :
+Retapez le nouveau mot de passe :
+passwd: password updated successfully
+Changing the user information for nessim
+Enter the new value, or press ENTER for the default
+        Full Name []: nessim belhadj
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Cette information est-elle correcte ? [O/n]O
+root@cp3:~# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:109::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:104:110:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+avahi-autoipd:x:105:113:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+wilder:x:1000:1000:wilder,,,:/home/wilder:/bin/bash
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+bareos:x:107:114:bareos,,,:/var/lib/bareos:/usr/sbin/nologin
+Debian-exim:x:108:115::/var/spool/exim4:/usr/sbin/nologin
+postgres:x:109:117:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+nessim:x:1001:1001:nessim belhadj,,,:/home/nessim:/bin/bash
+
+3) Pour le compte wilder je préconise un mdp plus complexe d'au moins 12 caracteres
+
+
