@@ -1,0 +1,2 @@
+Pour consulter les 10 dernieres tentatives de log échoué on execute la commande suivante :
+sudo lest -n 10 -f /var/log/auth.log | grep "failed"
